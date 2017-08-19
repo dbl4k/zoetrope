@@ -60,6 +60,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Factories\WidgetFactory.cs" />
     <Compile Include="ViewModels\Manager.cs" />
     <Compile Include="Widgets\Widget.xaml.cs">
       <DependentUpon>Widget.xaml</DependentUpon>

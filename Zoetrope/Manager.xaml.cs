@@ -26,8 +26,7 @@ namespace Zoetrope
             InitializeComponent();
             this.DataContext = new ViewModels.Manager();
         }
-
-
+        
         private void btnShowSampleWidget_Click(object sender, RoutedEventArgs e)
         {
             Widget wid = new Zoetrope.Widgets.Widget();
@@ -36,11 +35,15 @@ namespace Zoetrope
 
         private void btnNewWidget_Click(object sender, RoutedEventArgs e)
         {
-            // TODO : Need to store these in a widget list somehwere.
-            Widget wid = new Zoetrope.Widgets.Widget();
-            //wid.AnimatedGifControl.ImageBehavior.AnimatedSource
-            wid.SetAnimatedImage(txtNewWidgetPath.Text);
-            wid.Show();
+            CreateWidget(txtNewWidgetPath.Text).Show();
         }
+
+        private Widget CreateWidget(string path) {
+            Widget wid = Factories.WidgetFactory.Create(path);
+            ActiveWidgets.Add(wid);
+            return wid;
+        }
+
+        public List<Widgets.Widget> ActiveWidgets { get; set; } = new List<Widgets.Widget>();
     }
 }
