@@ -12,7 +12,7 @@ namespace Zoetrope.ViewModels
 
         public List<Widgets.Widget> ActiveWidgets { get; set; } = new List<Widgets.Widget>();
 
-        public string NewWidgetPath { get; set; } = "https://articulate-heroes.s3.amazonaws.com/uploads/rte/kgrtehja_DancingBannana.gif";
+        public string NewWidgetPath { get; set; } = "https://media.giphy.com/media/l2JHRhAtnJSDNJ2py/giphy.gif";
 
         // INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
