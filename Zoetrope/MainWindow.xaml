@@ -8,7 +8,7 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <GroupBox x:Name="grpDeveloperToys" Header="Developer Toys" HorizontalAlignment="Left" Height="171" Margin="10,10,0,0" VerticalAlignment="Top" Width="224">
-            <Button x:Name="btnShowSampleWidget" Content="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="121" Height="32"/>
+            <Button x:Name="btnShowSampleWidget" Content="Show Sample Widget" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="121" Height="32" Click="btnShowSampleWidget_Click"/>
         </GroupBox>
 
     </Grid>
