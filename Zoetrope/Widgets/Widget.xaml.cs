@@ -42,7 +42,7 @@ namespace Zoetrope.Widgets
         public void SetAnimatedImage(string path)
         {
             BitmapImage image = createBitmap(path);
-            setAnimatedSource(AnimatedGifControl, image);
+            setAnimatedSource(ImageControl, image);
         }
 
         private BitmapImage createBitmap(string path)
