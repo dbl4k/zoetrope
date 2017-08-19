@@ -24,11 +24,22 @@ namespace Zoetrope
         public Manager()
         {
             InitializeComponent();
+            this.DataContext = new ViewModels.Manager();
         }
+
 
         private void btnShowSampleWidget_Click(object sender, RoutedEventArgs e)
         {
             Widget wid = new Zoetrope.Widgets.Widget();
+            wid.Show();
+        }
+
+        private void btnNewWidget_Click(object sender, RoutedEventArgs e)
+        {
+            // TODO : Need to store these in a widget list somehwere.
+            Widget wid = new Zoetrope.Widgets.Widget();
+            //wid.AnimatedGifControl.ImageBehavior.AnimatedSource
+            wid.SetAnimatedImage(txtNewWidgetPath.Text);
             wid.Show();
         }
     }

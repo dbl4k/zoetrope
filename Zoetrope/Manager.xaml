@@ -4,12 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zoetrope"
+        xmlns:viewmodel="clr-namespace:Zoetrope.ViewModels"
         mc:Ignorable="d"
         Title="Zoetrope Manager" Height="420.5" Width="982.5">
     <Grid>
         <GroupBox x:Name="grpDeveloperToys" Header="Developer Toys" Margin="0,0,10,10" Height="111" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="159">
             <Button x:Name="btnShowSampleWidget" Content="Show Sample Widget" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="121" Height="32" Click="btnShowSampleWidget_Click"/>
         </GroupBox>
+        <StackPanel Margin="10,10,174,10">
+            <Grid Height="179">
+                <Label x:Name="lblNewWidgetPath" Content="Path/Url" Margin="10,24,10,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtNewWidgetPath" Height="23" Margin="10,50,10,0" TextWrapping="Wrap" Text="{Binding Path=NewWidgetPath}" VerticalAlignment="Top" />
+                <Button x:Name="btnNewWidget" Content="Create" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="88" Click="btnNewWidget_Click"/>
+            </Grid>
+        </StackPanel>
 
     </Grid>
 </Window>
