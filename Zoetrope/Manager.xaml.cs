@@ -17,11 +17,11 @@ using Zoetrope.Widgets;
 namespace Zoetrope
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Manager.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Manager : Window
     {
-        public MainWindow()
+        public Manager()
         {
             InitializeComponent();
         }
