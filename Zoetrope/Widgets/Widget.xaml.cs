@@ -23,5 +23,18 @@ namespace Zoetrope.Widgets
         {
             InitializeComponent();
         }
+
+        private void WidgetWindow_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if(isWindow(sender) && e.ChangedButton.Equals(MouseButton.Left))
+            {
+                ((Window)sender).DragMove();
+            }
+        }
+        
+        private bool isWindow(object obj)
+        {
+            return  obj.GetType().BaseType.Equals(typeof(Window));
+        }
     }
 }

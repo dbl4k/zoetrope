@@ -1,4 +1,4 @@
-﻿<Window
+﻿<Window x:Name="WidgetWindow"
         x:Class="Zoetrope.Widgets.Widget"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -8,7 +8,7 @@
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
         mc:Ignorable="d" 
         AllowsTransparency="True"
-        Title="Widget" Height="355.043" Width="628.635" ShowInTaskbar="False" Background="{x:Null}" WindowStyle="None">
+        Title="Widget" Height="355.043" Width="628.635" ShowInTaskbar="False" Background="{x:Null}" WindowStyle="None" MouseDown="WidgetWindow_MouseDown">
     <Grid>
         <Image x:Name="AnimatedGifControl" gif:ImageBehavior.AnimatedSource="https://articulate-heroes.s3.amazonaws.com/uploads/rte/kgrtehja_DancingBannana.gif" />
     </Grid>
