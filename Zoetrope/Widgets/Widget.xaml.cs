@@ -42,7 +42,13 @@ namespace Zoetrope.Widgets
         public void SetAnimatedImage(string path)
         {
             BitmapImage image = createBitmap(path);
+            setOriginalAspectRatio(image);
             setAnimatedSource(ImageControl, image);
+        }
+
+        private void setOriginalAspectRatio(BitmapImage image)
+        {
+            OriginalAspectRatio = getAspectRatio(image);
         }
 
         private BitmapImage createBitmap(string path)
@@ -63,5 +69,25 @@ namespace Zoetrope.Widgets
             ImageBehavior.SetRepeatBehavior(control, RepeatBehavior.Forever);
             ImageBehavior.SetAnimatedSource(control, bitmap);
         }
+
+        private double getAspectRatio(BitmapImage image)
+        {
+            double width = image.PixelWidth;
+            double height = image.PixelHeight;
+
+            return getAspectRatio(width, height);
+
+        }
+
+        private double getAspectRatio(double width, double height)
+        {
+            return width / height;
+        }
+
+        #region "Properties - Public"
+
+        public double OriginalAspectRatio { get; set; }
+
+        #endregion
     }
 }
