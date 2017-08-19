@@ -21,9 +21,10 @@ namespace Zoetrope.Widgets
     /// </summary>
     public partial class Widget : Window
     {
-        public Widget()
+        public Widget(ViewModels.Manager manager)
         {
             InitializeComponent();
+            Manager = manager;
         }
 
         private void WidgetWindow_MouseDown(object sender, MouseButtonEventArgs e)
@@ -87,6 +88,7 @@ namespace Zoetrope.Widgets
         #region "Properties - Public"
 
         public double OriginalAspectRatio { get; set; }
+        public ViewModels.Manager Manager { get; set; }
 
         #endregion
     }
