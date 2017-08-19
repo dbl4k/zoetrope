@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Zoetrope.ViewModels
 {
-    class Manager : INotifyPropertyChanged
+    public class Manager : INotifyPropertyChanged
     {
 
         public List<Widgets.Widget> ActiveWidgets { get; set; } = new List<Widgets.Widget>();
