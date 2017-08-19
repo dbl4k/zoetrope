@@ -38,12 +38,21 @@ namespace Zoetrope
             CreateWidget(txtNewWidgetPath.Text).Show();
         }
 
-        private Widget CreateWidget(string path) {
+        private Widget CreateWidget(string path)
+        {
             Widget wid = Factories.WidgetFactory.Create(path);
-            ActiveWidgets.Add(wid);
+            getDataContext.ActiveWidgets.Add(wid);
             return wid;
         }
 
-        public List<Widgets.Widget> ActiveWidgets { get; set; } = new List<Widgets.Widget>();
+        private ViewModels.Manager getDataContext
+        {
+            get {
+                // TODO : existance check?
+                return (ViewModels.Manager)this.DataContext;
+            }
+        }
+
+        
     }
 }
