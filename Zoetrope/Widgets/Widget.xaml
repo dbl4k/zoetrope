@@ -10,6 +10,6 @@
         AllowsTransparency="True"
         Title="Widget" Height="355.043" Width="628.635" ShowInTaskbar="False" Background="{x:Null}" WindowStyle="None">
     <Grid>
-        <Image x:Name="AnimatedGifControl" gif:ImageBehavior.AnimatedSource="..." />
+        <Image x:Name="AnimatedGifControl" gif:ImageBehavior.AnimatedSource="https://articulate-heroes.s3.amazonaws.com/uploads/rte/kgrtehja_DancingBannana.gif" />
     </Grid>
 </Window>
