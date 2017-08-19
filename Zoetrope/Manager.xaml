@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Zoetrope Manager" Height="350" Width="525">
     <Grid>
-        <GroupBox x:Name="grpDeveloperToys" Header="Developer Toys" HorizontalAlignment="Left" Height="171" Margin="283,138,0,0" VerticalAlignment="Top" Width="224">
+        <GroupBox x:Name="grpDeveloperToys" Header="Developer Toys" Margin="0,0,10,10" Height="111" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="159">
             <Button x:Name="btnShowSampleWidget" Content="Show Sample Widget" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="121" Height="32" Click="btnShowSampleWidget_Click"/>
         </GroupBox>
 
