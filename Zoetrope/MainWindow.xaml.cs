@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Zoetrope.Widgets;
 
 namespace Zoetrope
 {
@@ -23,6 +24,12 @@ namespace Zoetrope
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btnShowSampleWidget_Click(object sender, RoutedEventArgs e)
+        {
+            Widget wid = new Zoetrope.Widgets.Widget();
+            wid.Show();
         }
     }
 }
