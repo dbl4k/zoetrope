@@ -29,7 +29,8 @@ namespace Zoetrope
         
         private void btnShowSampleWidget_Click(object sender, RoutedEventArgs e)
         {
-            Widget wid = new Zoetrope.Widgets.Widget();
+            ViewModels.Manager manager = getDataContext;
+            Widget wid = new Zoetrope.Widgets.Widget(manager);
             wid.Show();
         }
 
@@ -40,7 +41,8 @@ namespace Zoetrope
 
         private Widget CreateWidget(string path)
         {
-            Widget wid = Factories.WidgetFactory.Create(path);
+            ViewModels.Manager manager = getDataContext;
+            Widget wid = Factories.WidgetFactory.Create(manager, path);
             getDataContext.ActiveWidgets.Add(wid);
             return wid;
         }
