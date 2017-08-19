@@ -1,12 +1,15 @@
-﻿<Window x:Class="Zoetrope.Widgets.Widget"
+﻿<Window x:Name="Widget" 
+        x:Class="Zoetrope.Widgets.Widget"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zoetrope.Widgets"
-        mc:Ignorable="d"
-        Title="Widget" Height="300" Width="300">
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d" 
+        AllowsTransparency="True"
+        Title="Widget" Height="355.043" Width="628.635" ShowInTaskbar="False" Background="{x:Null}" WindowStyle="None">
     <Grid>
-        
+        <Image x:Name="AnimatedGifControl" gif:ImageBehavior.AnimatedSource="..." />
     </Grid>
 </Window>
