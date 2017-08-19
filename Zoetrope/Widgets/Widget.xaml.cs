@@ -38,8 +38,7 @@ namespace Zoetrope.Widgets
         {
             return  obj.GetType().BaseType.Equals(typeof(Window));
         }
-
-
+        
         public void SetAnimatedImage(string path)
         {
             BitmapImage image = createBitmap(path);
