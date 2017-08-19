@@ -7,11 +7,11 @@ using WpfAnimatedGif;
 
 namespace Zoetrope.Factories
 {
-    class WidgetFactory
+    public class WidgetFactory
     {
-        public static Widgets.Widget Create(string path)
+        public static Widgets.Widget Create(ViewModels.Manager manager, string path)
         {
-            Widgets.Widget widget = new Widgets.Widget();
+            Widgets.Widget widget = new Widgets.Widget(manager);
             widget.SetAnimatedImage(path);
             return widget;
         }
