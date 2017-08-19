@@ -10,7 +10,7 @@ namespace Zoetrope.ViewModels
     class Manager : INotifyPropertyChanged
     {
 
-        public string NewWidgetPath { get; set; } = "https://m.popkey.co/7c2979/E8pyv_s-200x150.gif";
+        public string NewWidgetPath { get; set; } = "https://articulate-heroes.s3.amazonaws.com/uploads/rte/kgrtehja_DancingBannana.gif";
 
         // INotifyPropertyChanged
         public event PropertyChangedEventHandler PropertyChanged;
