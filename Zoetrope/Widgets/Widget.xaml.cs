@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfAnimatedGif;
 
 namespace Zoetrope.Widgets
 {
@@ -35,6 +36,17 @@ namespace Zoetrope.Widgets
         private bool isWindow(object obj)
         {
             return  obj.GetType().BaseType.Equals(typeof(Window));
+        }
+
+
+        public void SetAnimatedImage(string path)
+        {
+            var image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri(path);
+            image.EndInit();
+
+            ImageBehavior.SetAnimatedSource(AnimatedGifControl, image);
         }
     }
 }
