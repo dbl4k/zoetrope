@@ -10,7 +10,7 @@
         AllowsTransparency="True"
         Title="Widget" Height="355.043" Width="628.635" ShowInTaskbar="False" Background="{x:Null}" WindowStyle="None" MouseDown="WidgetWindow_MouseDown">
     <Grid>
-        <Image x:Name="AnimatedGifControl" />
+        <Image x:Name="ImageControl" />
 
     </Grid>
 </Window>
