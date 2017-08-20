@@ -21,23 +21,32 @@ namespace Zoetrope
     /// </summary>
     public partial class Manager : Window
     {
+
+        #region "ctors"
+        
         public Manager()
         {
             InitializeComponent();
             this.DataContext = new ViewModels.Manager();
         }
-        
+
+        #endregion
+
+        #region "UI Events"
+
         private void btnShowSampleWidget_Click(object sender, RoutedEventArgs e)
         {
             ViewModels.Manager manager = getDataContext;
             Widget wid = new Zoetrope.Widgets.Widget(manager);
             wid.Show();
         }
-
+        
         private void btnNewWidget_Click(object sender, RoutedEventArgs e)
         {
             CreateWidget(txtNewWidgetPath.Text).Show();
         }
+
+        #endregion
 
         private Widget CreateWidget(string path)
         {
