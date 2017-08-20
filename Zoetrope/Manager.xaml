@@ -17,6 +17,17 @@
                 <TextBox x:Name="txtNewWidgetPath" Height="23" Margin="10,50,10,0" TextWrapping="Wrap" Text="{Binding Path=NewWidgetPath}" VerticalAlignment="Top" />
                 <Button x:Name="btnNewWidget" Content="Create" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" Width="88" Click="btnNewWidget_Click"/>
             </Grid>
+            <Grid Height="178">
+                <ListBox HorizontalAlignment="Left" Margin="10,10,0,10" Width="770" ItemsSource="{Binding Path=ActiveWidgets}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
         </StackPanel>
 
     </Grid>
