@@ -52,7 +52,7 @@ namespace Zoetrope
         {
             ViewModels.Manager manager = getDataContext;
             Widget wid = Factories.WidgetFactory.Create(manager, path);
-            getDataContext.ActiveWidgets.Add(wid);
+            manager.ActiveWidgets.Add(wid);
             return wid;
         }
 
