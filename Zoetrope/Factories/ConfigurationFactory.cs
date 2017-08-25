@@ -13,7 +13,12 @@ namespace Zoetrope.Factories
 
         public String GetApplicationConfigDirectory()
         {
-            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), m_appDataFolderName);
+            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), m_appDataFolderName);
+        }
+
+        public Boolean ApplicationConfigDirectoryExists()
+        {
+            return System.IO.Directory.Exists(GetApplicationConfigDirectory());
         }
 
     }
