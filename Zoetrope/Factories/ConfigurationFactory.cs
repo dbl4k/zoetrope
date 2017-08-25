@@ -24,12 +24,12 @@ namespace Zoetrope.Factories
 
         public Boolean ApplicationConfigDirectoryExists()
         {
-            return System.IO.Directory.Exists(GetApplicationConfigDirectoryPath());
+            return Directory.Exists(GetApplicationConfigDirectoryPath());
         }
 
         public Boolean ApplicationConfigFileExists()
         {
-            return System.IO.File.Exists(GetApplicationConfigFilePath());
+            return File.Exists(GetApplicationConfigFilePath());
         }
 
     }
