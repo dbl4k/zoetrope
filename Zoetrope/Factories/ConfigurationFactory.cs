@@ -32,5 +32,14 @@ namespace Zoetrope.Factories
             return File.Exists(GetApplicationConfigFilePath());
         }
 
+        public void SaveConfiguration(List<Widgets.Widget> widgetList) {
+            throw new NotImplementedException();
+        }
+
+        public List<Widgets.Widget> LoadConfiguration()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }
