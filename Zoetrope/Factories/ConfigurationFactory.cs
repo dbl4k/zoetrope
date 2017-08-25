@@ -9,16 +9,27 @@ namespace Zoetrope.Factories
 {
     class ConfigurationFactory
     {
-        private readonly String m_appDataFolderName = "Zoetrope";
+        private const String m_appDataFileName = "zoetrope.savedstate.xml";
+        private const String m_appDataFolderName = "Zoetrope";
 
-        public String GetApplicationConfigDirectory()
+        public String GetApplicationConfigDirectoryPath()
         {
             return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), m_appDataFolderName);
         }
 
+        public String GetApplicationConfigFilePath()
+        {
+            return Path.Combine(GetApplicationConfigDirectoryPath(), m_appDataFileName);
+        }
+
         public Boolean ApplicationConfigDirectoryExists()
         {
-            return System.IO.Directory.Exists(GetApplicationConfigDirectory());
+            return System.IO.Directory.Exists(GetApplicationConfigDirectoryPath());
+        }
+
+        public Boolean ApplicationConfigFileExists()
+        {
+            return System.IO.File.Exists(GetApplicationConfigFilePath());
         }
 
     }
